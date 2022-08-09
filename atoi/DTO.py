@@ -1,5 +1,5 @@
 class AtoiDTO:
-    def deserializer(self, data):
+    def deserializer(data):
         return{
             'atoi_string' : data['atoi']
         }
