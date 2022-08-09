@@ -1,3 +1,6 @@
+from atoi.models import AtoiLog
+
+
 class AtoiInteractor:
     def __init__(self) -> None:
         pass
@@ -38,7 +41,16 @@ class AtoiInteractor:
             
         return self.res if self.flag == False else (-1 * self.res)
 
+    def __db_save(self):
+        atoiLog = AtoiLog()
+        atoiLog.atoi_number = self.res
+        atoiLog.atoi_string = self.atoi_string
+
+        atoiLog.save()
+
     def excute(self):
-        return self.__atoi_bussiness()
+        self.res = self.__atoi_bussiness()
+        self.__db_save()
+        return self.res
 
    
