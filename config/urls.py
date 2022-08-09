@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from atoi import views
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('atoi/', views.atoi_post),
 ]

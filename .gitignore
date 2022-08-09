@@ -1,1 +1,5 @@
 /Pipfile
+config/__pycache__/
+atoi/__pycache__/
+db.sqlite3
+atoi/migrations/
